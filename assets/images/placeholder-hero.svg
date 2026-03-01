@@ -1,0 +1,11 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A2842"/>
+      <stop offset="1" stop-color="#123D63"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" rx="40" fill="url(#g)"/>
+  <rect x="80" y="80" width="1040" height="560" rx="28" fill="#FFFFFF" fill-opacity="0.08" stroke="#B5E8FF" stroke-opacity="0.3"/>
+  <text x="100" y="360" fill="#D9F4FF" font-family="Segoe UI, sans-serif" font-size="52" font-weight="700">Virtue Konsult Image Placeholder</text>
+</svg>
