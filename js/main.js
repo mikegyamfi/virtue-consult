@@ -15,6 +15,7 @@ function closeNav() {
   if (nav && toggle) {
     nav.classList.remove("open");
     toggle.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("menu-open");
   }
 }
 
@@ -23,6 +24,7 @@ if (toggle && nav) {
     event.stopPropagation();
     const isOpen = nav.classList.toggle("open");
     toggle.setAttribute("aria-expanded", String(isOpen));
+    document.body.classList.toggle("menu-open", isOpen);
   });
 
   document.addEventListener("click", (event) => {
