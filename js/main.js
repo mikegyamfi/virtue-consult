@@ -53,7 +53,7 @@ if (navMap[pageKey]) {
 
 const items = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
 items.forEach((item, index) => {
-  item.style.setProperty("--delay", `${Math.min(index * 55, 280)}ms`);
+  item.style.setProperty("--delay", `${Math.min(index * 70, 420)}ms`);
 });
 
 const observer = new IntersectionObserver(
@@ -64,7 +64,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.16 }
+  { threshold: 0.18, rootMargin: "0px 0px -6% 0px" }
 );
 
 items.forEach((item) => observer.observe(item));
@@ -73,3 +73,31 @@ const yearEl = document.getElementById("year");
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
+
+const flipCards = document.querySelectorAll(".flip-card");
+flipCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("is-flipped");
+  });
+
+  card.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      card.classList.toggle("is-flipped");
+    }
+  });
+});
+
+const projectFlipCards = document.querySelectorAll(".project-flip-card");
+projectFlipCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("is-flipped");
+  });
+
+  card.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      card.classList.toggle("is-flipped");
+    }
+  });
+});
