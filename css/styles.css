@@ -245,6 +245,12 @@ img {
   position: relative;
 }
 
+.hero .hero-copy-card h1 {
+  font-size: clamp(1.75rem, 4.4vw, 3rem);
+  line-height: 1.06;
+  margin-bottom: 10px;
+}
+
 .hero-copy-card::before {
   content: none;
 }
@@ -350,6 +356,23 @@ img {
   font-weight: 700;
   margin: 0 0 9px;
   font-size: 0.75rem;
+}
+
+.hero .eyebrow {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.hero .eyebrow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 46px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, rgba(244, 194, 15, 0.95), rgba(15, 61, 107, 0.75));
 }
 
 h1,
@@ -1321,6 +1344,10 @@ body.menu-open {
 
   h1 {
     font-size: 2.35rem;
+  }
+
+  .hero .hero-copy-card h1 {
+    font-size: 1.72rem;
   }
 
   h2::after {
